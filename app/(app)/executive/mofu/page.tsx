@@ -1,2 +1,2 @@
-export { metadata } from "@/app/courses/executive/mofu/page";
-export { default } from "@/app/courses/executive/mofu/page";
+export { metadata } from "@/app/(app)/courses/executive/mofu/page";
+export { default } from "@/app/(app)/courses/executive/mofu/page";

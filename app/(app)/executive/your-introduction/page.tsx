@@ -1,2 +1,2 @@
-export { metadata } from "@/app/courses/executive/your-introduction/page";
-export { default } from "@/app/courses/executive/your-introduction/page";
+export { metadata } from "@/app/(app)/courses/executive/your-introduction/page";
+export { default } from "@/app/(app)/courses/executive/your-introduction/page";
