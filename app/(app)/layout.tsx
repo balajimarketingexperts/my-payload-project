@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL || "https://www.balajimarketinginstitute.com"),
   title: "Balaji Marketing Institute | Job-Linked Marketing & MBA Programs in India",
   description:
     "India's top B school for sales and marketing. Job-linked programs in Digital Marketing, Performance Marketing & MBA Marketing. 96% placement rate, 2,500+ students placed, 150+ recruiting partners. Graduate with a job, not just a degree. Live projects, real budgets, 1:1 mentorship from industry practitioners.",
