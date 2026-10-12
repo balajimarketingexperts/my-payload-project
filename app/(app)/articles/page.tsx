@@ -2,6 +2,7 @@ import { getPayload } from 'payload'
 import configPromise from '@payload-config'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Articles | My Site',
