@@ -15,8 +15,8 @@ const jsonLd = {
   "@type": "EducationalOrganization",
   name: "Balaji Marketing Institute",
   alternateName: "BMI",
-  url: "https://www.balajimarketinginstitute.com",
-  logo: "https://www.balajimarketinginstitute.com/logo.jpg",
+  url: "https://balajimarketinginstitute.in",
+  logo: "https://balajimarketinginstitute.in/logo.png",
   telephone: "+918368121032",
   description:
     "India's top B school for marketing, sales and business leadership. Job-linked programs in digital marketing, performance marketing, and MBA marketing. Graduate with a job, not just a degree.",

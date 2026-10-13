@@ -13,141 +13,55 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL || "https://www.balajimarketinginstitute.com"),
-  title: "Balaji Marketing Institute | Job-Linked Marketing & MBA Programs in India",
+  metadataBase: new URL("https://balajimarketinginstitute.in"),
+  title: {
+    default: "Best Digital Marketing Institute in Rohini | Balaji Marketing Institute",
+    template: "%s | Balaji Marketing Institute",
+  },
   description:
-    "India's top B school for sales and marketing. Job-linked programs in Digital Marketing, Performance Marketing & MBA Marketing. 96% placement rate, 2,500+ students placed, 150+ recruiting partners. Graduate with a job, not just a degree. Live projects, real budgets, 1:1 mentorship from industry practitioners.",
+    "Join Balaji Marketing Institute in Rohini, Delhi. Master SEO, Performance Marketing, Social Media & AI Tools with 100% practical training & placement assistance.",
   keywords: [
-    "marketing",
-    "sales",
-    "business",
-    "digital marketing",
-    "performance marketing",
-    "performance media",
-    "SEO",
-    "paid search",
-    "search ads",
-    "programmatic display",
-    "content",
-    "AI tools",
-    "automation",
-    "AI-led",
-    "AI-first",
-    "digital-first businesses",
-    "business leadership",
-    "sales leadership",
-    "omni-channel",
-    "quick commerce",
-    "FMCG",
-    "e-commerce",
-    "GTM",
-    "product marketing",
-    "customer marketing",
-    "recruitment marketing",
-    "The Marketing Launchpad",
-    "PGP in AI-Led Marketing",
-    "PGP in AI-Led Sales, Marketing and Business",
-    "PG program",
-    "postgraduate-equivalent",
-    "job-linked programs",
-    "digital marketing course (full-time, part-time/weekend, in Hindi)",
-    "online",
-    "offline",
-    "online & offline",
-    "graduates only",
-    "open for all",
-    "6 months",
-    "9 months",
-    "AI-first industry-relevant curriculum",
-    "explore programs",
-    "job",
-    "jobs",
-    "hired",
-    "hiring",
-    "hiring partner",
-    "career",
-    "careers",
-    "career outcomes",
-    "career momentum",
-    "career growth",
-    "employability",
-    "recruitment",
-    "recruiters",
-    "recruiting partners",
-    "talent",
-    "talent pool",
-    "talent acquisition",
-    "quality talent",
-    "quality candidates",
-    "candidates",
-    "onboarding",
-    "internship",
-    "interns",
-    "trainee",
-    "entry-level",
-    "hire again",
-    "performance marketing executive",
-    "performance marketing specialist",
-    "performance marketeer",
-    "sales development representative",
-    "area sales executive",
-    "sales executive trainee",
-    "senior marketing analyst",
-    "trainee analyst (search ads)",
-    "trainee analyst (performance media)",
-    "paid search analyst",
-    "analyst (programmatic display)",
-    "SEO executive",
-    "content writer",
-    "digital marketing trainee",
-    "professionalism",
-    "preparedness",
-    "market-ready",
-    "fast turnaround",
-    "swift support",
-    "reliable partner",
-    "hands-on learning",
-    "practical training",
-    "live projects",
-    "real-world business challenges",
-    "hit the ground running",
+    "Digital Marketing Institute in Rohini",
+    "Best Digital Marketing Course in Rohini",
+    "Digital Marketing Course in Delhi",
+    "SEO Training Institute in Rohini",
+    "Performance Marketing Course Delhi",
     "Balaji Marketing Institute",
-    "BMI Delhi",
   ],
-  authors: [{ name: "Balaji Marketing Institute" }],
-  creator: "Balaji Marketing Institute",
-  publisher: "Balaji Marketing Institute",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true },
+  alternates: {
+    canonical: "https://balajimarketinginstitute.in",
   },
   openGraph: {
-    type: "website",
-    locale: "en_IN",
-    url: "https://www.balajimarketinginstitute.com",
-    siteName: "Balaji Marketing Institute",
-    title: "Balaji Marketing Institute | Job-Linked Marketing Programs",
+    title: "Best Digital Marketing Institute in Rohini | Balaji Marketing Institute",
     description:
-      "Graduate with a job, not just a certificate. India's top marketing B school with 96% placement rate, live projects on real brands, and 1:1 CMO mentorship.",
+      "Learn Digital Marketing with Live Projects, Expert Mentorship & 100% Placement Support in Rohini.",
+    url: "https://balajimarketinginstitute.in",
+    siteName: "Balaji Marketing Institute",
+    locale: "en_IN",
+    type: "website",
     images: [
       {
-        url: "/logo.jpg",
+        url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Balaji Marketing Institute — Learn Build Grow",
+        alt: "Balaji Marketing Institute - Best Digital Marketing Institute in Rohini",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Balaji Marketing Institute | Job-Linked Marketing Programs",
+    title: "Best Digital Marketing Institute in Rohini | Balaji Marketing Institute",
     description:
-      "India's top B school for marketing & sales. 96% placement rate. Live projects, real budgets, CMO mentors.",
-    images: ["/logo.jpg"],
+      "Learn Digital Marketing with Live Projects, Expert Mentorship & 100% Placement Support in Rohini.",
+    images: ["/logo.png"],
   },
-  alternates: {
-    canonical: "https://www.balajimarketinginstitute.com",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 
@@ -156,11 +70,44 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": ["EducationalOrganization", "LocalBusiness"],
+    name: "Balaji Marketing Institute",
+    url: "https://balajimarketinginstitute.in",
+    logo: "https://balajimarketinginstitute.in/logo.png",
+    email: "balajimarketinginstitute@gmail.com",
+    telephone: "+918368121032",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Rohini",
+      addressRegion: "Delhi",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "28.7041",
+      longitude: "77.1025",
+    },
+    sameAs: [
+      "https://www.facebook.com/balajimarketinginstitute",
+      "https://www.instagram.com/balajimarketinginstitute",
+      "https://www.linkedin.com/company/balajimarketinginstitute",
+      "https://www.youtube.com/@balajimarketinginstitute",
+    ],
+  };
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

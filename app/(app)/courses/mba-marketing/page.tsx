@@ -63,7 +63,7 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "EducationalOrganization",
-      "@id": "https://balajimarketinginstitute.com/#organization",
+      "@id": "https://balajimarketinginstitute.in/#organization",
       name: "Balaji Marketing Institute",
       alternateName: ["BMI", "Balaji Marketing Institute Delhi"],
       description:
@@ -87,12 +87,12 @@ const jsonLd = {
     },
     {
       "@type": "Course",
-      "@id": "https://balajimarketinginstitute.com/courses/mba-marketing/#course",
+      "@id": "https://balajimarketinginstitute.in/courses/mba-marketing/#course",
       name: "MBA in Marketing / Post Graduate Program (PGP) in Sales and Marketing",
       description:
         "AI-led sales and marketing program with placements, combining brand strategy, channel sales, B2B pipelines, and placement support with 150+ partners.",
       provider: {
-        "@id": "https://balajimarketinginstitute.com/#organization",
+        "@id": "https://balajimarketinginstitute.in/#organization",
       },
       timeRequired: "P2Y",
       offers: {

@@ -50,7 +50,7 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "EducationalOrganization",
-      "@id": "https://balajimarketinginstitute.com/#organization",
+      "@id": "https://balajimarketinginstitute.in/#organization",
       name: "Balaji Marketing Institute",
       alternateName: ["BMI", "Balaji Marketing Institute Delhi"],
       description:
@@ -67,12 +67,12 @@ const jsonLd = {
     },
     {
       "@type": "Course",
-      "@id": "https://balajimarketinginstitute.com/courses/executive/#course",
+      "@id": "https://balajimarketinginstitute.in/courses/executive/#course",
       name: "Executive Program in Marketing & Growth",
       description:
         "Fast-track 3-month weekend program designed exclusively for working professionals covering high-budget paid media, conversion funnels, attribution, and AI automation.",
       provider: {
-        "@id": "https://balajimarketinginstitute.com/#organization",
+        "@id": "https://balajimarketinginstitute.in/#organization",
       },
       timeRequired: "P3M",
       courseMode: "blended",

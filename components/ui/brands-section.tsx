@@ -168,6 +168,21 @@ export default function BrandsSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
+    try {
+      fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: companyName,
+          phone: phone,
+          email: "",
+          course: `Hiring: ${role}`,
+          message: `Recruiter enquiry from ${companyName} looking for ${role}`,
+        }),
+      }).catch((err) => console.error("Lead submission error:", err));
+    } catch (err) {
+      console.error("Lead submission error:", err);
+    }
   };
 
   return (

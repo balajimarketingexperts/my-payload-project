@@ -153,7 +153,7 @@ export default function FloatingContactPopup() {
 
                   <div className="mt-3.5 pt-2.5 border-t border-white/10 text-center">
                     <span className="text-[11px] text-white/40">
-                      www.balajimarketinginstitute.com
+                      balajimarketinginstitute.in
                     </span>
                   </div>
                 </motion.div>

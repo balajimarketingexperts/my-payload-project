@@ -65,7 +65,7 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "EducationalOrganization",
-      "@id": "https://balajimarketinginstitute.com/#organization",
+      "@id": "https://balajimarketinginstitute.in/#organization",
       name: "Balaji Marketing Institute",
       alternateName: [
         "BMI",
@@ -100,12 +100,12 @@ const jsonLd = {
     },
     {
       "@type": "Course",
-      "@id": "https://balajimarketinginstitute.com/courses/diploma/#course",
+      "@id": "https://balajimarketinginstitute.in/courses/diploma/#course",
       name: "Diploma in Digital Marketing with Placement",
       description:
         "Comprehensive 6-month digital marketing course covering Brand Strategy, Meta Ads (Facebook and Instagram), Google Search Ads, Advanced Google Ads, Search Engine Optimization (SEO), LLM Optimization, Programmatic Advertising (DV360, CM360), Ecommerce & Quick Commerce, Content Marketing, and Generative AI.",
       provider: {
-        "@id": "https://balajimarketinginstitute.com/#organization",
+        "@id": "https://balajimarketinginstitute.in/#organization",
       },
       educationalCredentialAwarded:
         "BMI Diploma in Digital Marketing Certification",

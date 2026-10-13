@@ -149,6 +149,23 @@ export default function RegistrationForm({
       // ignore
     }
 
+    // Send lead to Google Sheets & Email webhook via /api/lead
+    try {
+      fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          course: title,
+          message: `Application submitted via website. WhatsApp opt-in: ${formData.whatsappOptIn}`,
+        }),
+      }).catch((err) => console.error("Lead submission error:", err));
+    } catch (err) {
+      console.error("Lead submission error:", err);
+    }
+
     const targetUrl = getTargetIntroductionUrl();
     const query = new URLSearchParams({
       name: formData.fullName,

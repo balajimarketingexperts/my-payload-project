@@ -8,6 +8,7 @@ import RegistrationForm from "./registration-form";
 import { ShaderBackground } from "@/components/ui/waves-shader";
 import { HoneyEmberBackground } from "@/components/ui/honey-ember-background";
 import DottedTrailCursor from "@/components/ui/dotted-trail-cursor";
+export { HeroSection } from "./hero-section";
 
 export interface ShaderShowcaseProps {
   badge?: string;

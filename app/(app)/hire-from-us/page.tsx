@@ -79,11 +79,11 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "EducationalOrganization",
-      "@id": "https://www.balajimarketinginstitute.com/#organization",
+      "@id": "https://balajimarketinginstitute.in/#organization",
       name: "Balaji Marketing Institute",
       alternateName: "BMI",
-      url: "https://www.balajimarketinginstitute.com",
-      logo: "https://www.balajimarketinginstitute.com/logo.jpg",
+      url: "https://balajimarketinginstitute.in",
+      logo: "https://balajimarketinginstitute.in/logo.png",
       telephone: "+91-8368121032",
       address: {
         "@type": "PostalAddress",
@@ -107,7 +107,7 @@ const jsonLd = {
       "@type": "Service",
       name: "Corporate Marketing Recruitment & Placement Service",
       provider: {
-        "@id": "https://www.balajimarketinginstitute.com/#organization",
+        "@id": "https://balajimarketinginstitute.in/#organization",
       },
       serviceType: "Campus Hiring & Talent Placement",
       description:

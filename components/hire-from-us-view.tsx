@@ -303,6 +303,22 @@ export default function HireFromUsView() {
 
     setIsSubmitting(true);
 
+    try {
+      fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: `${formData.recruiterName} (${formData.companyName})`,
+          email: formData.workEmail,
+          phone: formData.phone,
+          course: `Hiring: ${formData.selectedRole || "General"} (${formData.openingsCount} openings)`,
+          message: `Recruiter enquiry from ${formData.companyName}. Recruiter: ${formData.recruiterName}, Openings: ${formData.openingsCount}, Role: ${formData.selectedRole}`,
+        }),
+      }).catch((err) => console.error("Lead submission error:", err));
+    } catch (err) {
+      console.error("Lead submission error:", err);
+    }
+
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);

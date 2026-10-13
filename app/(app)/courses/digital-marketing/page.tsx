@@ -49,7 +49,7 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "EducationalOrganization",
-      "@id": "https://balajimarketinginstitute.com/#organization",
+      "@id": "https://balajimarketinginstitute.in/#organization",
       name: "Balaji Marketing Institute",
       alternateName: ["BMI", "Balaji Marketing Institute Delhi"],
       description:
@@ -67,12 +67,12 @@ const jsonLd = {
     },
     {
       "@type": "Course",
-      "@id": "https://balajimarketinginstitute.com/courses/digital-marketing/#course",
+      "@id": "https://balajimarketinginstitute.in/courses/digital-marketing/#course",
       name: "Digital Marketing Course with Placement",
       description:
         "Comprehensive 6-month digital marketing course covering Meta Ads, Google Ads, SEO, Content Marketing, and Generative AI with 100% placement assistance.",
       provider: {
-        "@id": "https://balajimarketinginstitute.com/#organization",
+        "@id": "https://balajimarketinginstitute.in/#organization",
       },
       timeRequired: "P6M",
     },
