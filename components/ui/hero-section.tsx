@@ -27,7 +27,7 @@ export function HeroSection({ children }: HeroSectionProps = {}) {
               Enroll Now
             </a>
             <a
-              href="#curriculum"
+              href="#apply"
               className="w-full rounded-lg border border-gray-300 px-6 py-3.5 text-center font-semibold text-gray-700 hover:bg-gray-50 sm:w-auto"
             >
               Download Brochure

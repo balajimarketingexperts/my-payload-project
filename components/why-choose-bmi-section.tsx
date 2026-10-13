@@ -304,8 +304,8 @@ export default function WhyChooseBmiSection({ className = "" }: WhyChooseBmiSect
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
-              href="#syllabus"
-              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 text-white font-medium text-xs sm:text-sm text-center transition-all flex items-center justify-center gap-2"
+              href="#apply"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 text-white font-medium text-xs sm:text-sm text-center transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <FileText className="w-4 h-4 text-white/80" />
               Download Syllabus

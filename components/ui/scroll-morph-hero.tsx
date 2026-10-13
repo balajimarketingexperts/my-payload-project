@@ -269,7 +269,7 @@ export default function ScrollMorphHero({
         <div ref={containerRef} className="relative w-full h-full bg-[#F6F1E6] overflow-hidden">
             <div className="flex h-full w-full flex-col items-center justify-center">
                 {/* Intro text (fades out as you scroll) */}
-                <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 max-w-xl mx-auto pointer-events-none">
+                <div className="relative z-30 flex flex-col items-center justify-center text-center px-4 max-w-xl mx-auto -translate-y-12 sm:translate-y-0 pointer-events-none">
                     <motion.h1
                         initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
                         animate={
@@ -371,13 +371,16 @@ export default function ScrollMorphHero({
                                     const isMobile = containerSize.width < 768;
                                     const minDim = Math.min(containerSize.width, containerSize.height);
 
-                                    // A. Circle
-                                    const circleRadius = Math.min(minDim * 0.35, 350);
+                                    // A. Circle (offset down on mobile so it sits cleanly below text)
+                                    const circleCenterY = isMobile ? 125 : 0;
+                                    const circleRadius = isMobile
+                                        ? Math.min(minDim * 0.28, 110)
+                                        : Math.min(minDim * 0.35, 350);
                                     const circleAngle = (i / TOTAL_IMAGES) * 360;
                                     const circleRad = (circleAngle * Math.PI) / 180;
                                     const circlePos = {
                                         x: Math.cos(circleRad) * circleRadius,
-                                        y: Math.sin(circleRad) * circleRadius,
+                                        y: Math.sin(circleRad) * circleRadius + circleCenterY,
                                         rotation: circleAngle + 90,
                                     };
 

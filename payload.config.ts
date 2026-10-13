@@ -1,5 +1,6 @@
 import { Responses } from './collections/Responses'
 import { Articles } from './collections/Articles'
+import { Leads } from './collections/Leads'
 import { sqliteAdapter } from "@payloadcms/db-sqlite";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import path from "path";
@@ -20,7 +21,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Responses, Articles],
+  collections: [Users, Media, Responses, Articles, Leads],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {

@@ -1,14 +1,63 @@
 import type { CollectionConfig } from 'payload'
 
+const formatSlug = (val: string): string => {
+  return val
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
 export const Articles: CollectionConfig = {
   slug: 'articles',
+  labels: {
+    singular: 'Article / Blog Post',
+    plural: 'Articles & Blogs',
+  },
   admin: {
     useAsTitle: 'title',
     defaultColumns: ['title', 'status', 'publishedAt', 'author'],
-    description: 'Yahan se apne blog articles manage karo',
+    description: 'Yahan se apne blog articles aur content manage karo.',
   },
   access: {
-    read: () => true, // Public read access
+    read: () => true, // Public read access for website visitors
+    create: ({ req }) => Boolean(req.user), // Logged in admin can create
+    update: ({ req }) => Boolean(req.user), // Logged in admin can update
+    delete: ({ req }) => Boolean(req.user), // Logged in admin can delete
+  },
+  hooks: {
+    beforeValidate: [
+      ({ data }) => {
+        if (!data) return data
+
+        // Auto-generate slug from title if missing, or sanitize existing slug
+        if (!data.slug && data.title) {
+          data.slug = formatSlug(data.title)
+        } else if (data.slug) {
+          data.slug = formatSlug(data.slug)
+        }
+
+        return data
+      },
+    ],
+    beforeChange: [
+      ({ data, req, operation }) => {
+        if (!data) return data
+
+        // Automatically set publishedAt date when status is changed to 'published'
+        if (data.status === 'published' && !data.publishedAt) {
+          data.publishedAt = new Date().toISOString()
+        }
+
+        // Automatically associate author with logged-in user if not already set
+        if (!data.author && req.user?.id) {
+          data.author = req.user.id
+        }
+
+        return data
+      },
+    ],
   },
   fields: [
     // ─── Main Content ───────────────────────────────────────────
@@ -17,42 +66,68 @@ export const Articles: CollectionConfig = {
       type: 'text',
       label: 'Article Title',
       required: true,
+      admin: {
+        placeholder: 'e.g. Top 10 Digital Marketing Trends in 2026',
+      },
     },
     {
       name: 'slug',
       type: 'text',
-      label: 'URL Slug (e.g. my-first-article)',
-      required: true,
+      label: 'URL Slug',
       unique: true,
       admin: {
-        description: 'URL mein yahi dikhega: /articles/[slug]',
+        description:
+          'Khaali chhod sakte hain — Title se automatically generate ho jayega (e.g. top-10-digital-marketing-trends-in-2026)',
+        placeholder: 'top-10-digital-marketing-trends-in-2026',
       },
     },
     {
       name: 'excerpt',
       type: 'textarea',
-      label: 'Short Description / Excerpt',
+      label: 'Short Description / Summary',
       admin: {
-        description: 'Article ki chhoti summary (SEO aur cards mein use hogi)',
+        description: 'Article ki chhoti summary jo blog listing cards aur search results mein dikhegi.',
+        placeholder: 'A brief summary of what readers will learn...',
       },
     },
     {
       name: 'featuredImage',
       type: 'upload',
-      label: 'Featured Image',
+      label: 'Featured Banner Image',
       relationTo: 'media',
     },
     {
       name: 'content',
       type: 'richText',
       label: 'Article Content',
-      required: true,
+      admin: {
+        description: 'Article ka main text, headings, bullet points aur images yahan likhein.',
+      },
     },
     {
       name: 'author',
       type: 'relationship',
       label: 'Author',
       relationTo: 'users',
+      admin: {
+        position: 'sidebar',
+      },
+    },
+    {
+      name: 'category',
+      type: 'select',
+      label: 'Category',
+      defaultValue: 'Digital Marketing',
+      options: [
+        { label: 'Digital Marketing', value: 'Digital Marketing' },
+        { label: 'SEO & Content', value: 'SEO & Content' },
+        { label: 'Performance Ads & Meta', value: 'Performance Ads & Meta' },
+        { label: 'AI Tools & Automation', value: 'AI Tools & Automation' },
+        { label: 'Career & Industry Guides', value: 'Career & Industry Guides' },
+      ],
+      admin: {
+        position: 'sidebar',
+      },
     },
     {
       name: 'tags',
@@ -70,11 +145,11 @@ export const Articles: CollectionConfig = {
     {
       name: 'status',
       type: 'select',
-      label: 'Status',
+      label: 'Publish Status',
       defaultValue: 'draft',
       options: [
         { label: 'Draft (Private)', value: 'draft' },
-        { label: 'Published (Live)', value: 'published' },
+        { label: 'Published (Live on Website)', value: 'published' },
       ],
       admin: {
         position: 'sidebar',
@@ -89,6 +164,7 @@ export const Articles: CollectionConfig = {
         date: {
           pickerAppearance: 'dayAndTime',
         },
+        description: 'Publish karne par automatically current date/time set ho jayegi agar khaali hai.',
       },
     },
 
@@ -98,23 +174,23 @@ export const Articles: CollectionConfig = {
       type: 'group',
       label: 'SEO Settings',
       admin: {
-        description: 'Google search result mein yahi dikhega',
+        description: 'Google search results aur social media share ke liye metadata',
       },
       fields: [
         {
           name: 'metaTitle',
           type: 'text',
-          label: 'Meta Title (60 characters recommended)',
+          label: 'Meta Title (up to 60 characters)',
           admin: {
-            description: 'Browser tab aur Google mein dikhne wala title',
+            description: 'Google Search mein dikhne wala title. Khaali chhodne par article title use hoga.',
           },
         },
         {
           name: 'metaDescription',
           type: 'textarea',
-          label: 'Meta Description (160 characters recommended)',
+          label: 'Meta Description (up to 160 characters)',
           admin: {
-            description: 'Google search result mein description',
+            description: 'Google search result ke neeche aane wala description snippet.',
           },
         },
         {
@@ -122,17 +198,15 @@ export const Articles: CollectionConfig = {
           type: 'upload',
           label: 'Social Share Image (OG Image)',
           relationTo: 'media',
-          admin: {
-            description: 'WhatsApp/Twitter/Facebook pe share karne par yeh image dikhegi',
-          },
         },
         {
           name: 'noIndex',
           type: 'checkbox',
-          label: 'Google se hide karo (noindex)',
+          label: 'Hide from Search Engines (noindex)',
           defaultValue: false,
         },
       ],
     },
   ],
+  timestamps: true,
 }

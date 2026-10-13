@@ -61,6 +61,7 @@ const NAV: Array<{
 }> = [
   { label: "Programs", href: "/#programs" },
   { label: "Courses", href: "/#courses", isDropdown: true },
+  { label: "Blog", href: "/blog" },
   { label: "Outcomes", href: "/#outcomes" },
   { label: "Hire From Us", href: "/hire-from-us", highlight: true },
   { label: "About", href: "/#about" },

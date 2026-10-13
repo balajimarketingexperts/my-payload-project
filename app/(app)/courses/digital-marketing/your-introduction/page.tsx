@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Tell us about your goals, share what you know about digital marketing, and watch a video to share what audience is watching.",
 };
 
-export const digitalMarketingIntroductionConfig: MofuCourseConfig = {
+const digitalMarketingIntroductionConfig: MofuCourseConfig = {
   courseId: "digital-marketing",
   courseName: "Digital Marketing Course",
   badge: "Admissions Step 2 · Your Introduction",

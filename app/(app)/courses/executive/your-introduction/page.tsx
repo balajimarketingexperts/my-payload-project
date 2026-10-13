@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Answer a few simple questions about your career goals, what you know about performance marketing, and watch a video to share what audience is watching.",
 };
 
-export const executiveIntroductionConfig: MofuCourseConfig = {
+const executiveIntroductionConfig: MofuCourseConfig = {
   courseId: "executive",
   courseName: "Executive Program in Marketing & Growth (3 Months)",
   badge: "Admissions Step 2 · Your Introduction",

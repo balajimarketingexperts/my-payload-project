@@ -108,7 +108,7 @@ export default function ExecutiveCoursePage() {
           primaryCtaText="Apply for Executive Cohort"
           primaryCtaHref="#apply"
           secondaryCtaText="Download Weekend Syllabus"
-          secondaryCtaHref="#curriculum"
+          secondaryCtaHref="#apply"
           formTitle="Apply for Executive Batch"
           formSubtitle="Sundays Only (10:30 AM – 2:30 PM) · Limited to 25 Working Professionals"
           formBadge="Sunday Cohort 2026"

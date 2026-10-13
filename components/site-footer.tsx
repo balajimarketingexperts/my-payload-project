@@ -190,6 +190,7 @@ export default function SiteFooter() {
             </h4>
             <ul className="flex flex-col gap-2.5 text-sm text-white/60">
               <li><a href="/hire-from-us" className="text-[#F86104] font-semibold hover:underline">Hire From Us (Recruiters) →</a></li>
+              <li><a href="/blog" className="hover:text-[#F86104] transition-colors">Blog & Guides</a></li>
               <li><a href="/#programs" className="hover:text-[#F86104] transition-colors">Programs</a></li>
               <li><a href="/#outcomes" className="hover:text-[#F86104] transition-colors">Outcomes</a></li>
               <li><a href="/#brands" className="hover:text-[#F86104] transition-colors">Brands We Work With</a></li>

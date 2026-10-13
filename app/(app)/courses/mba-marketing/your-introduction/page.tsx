@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Answer a few simple questions about your career goals, what you know about marketing strategy, and watch a video to share what audience is watching.",
 };
 
-export const mbaMarketingIntroductionConfig: MofuCourseConfig = {
+const mbaMarketingIntroductionConfig: MofuCourseConfig = {
   courseId: "mba-marketing",
   courseName: "MBA in Marketing & Brand Leadership (2 Years)",
   badge: "Admissions Step 2 · Your Introduction",

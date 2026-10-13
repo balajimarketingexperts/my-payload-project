@@ -168,7 +168,7 @@ export default function DiplomaCoursePage() {
           primaryCtaText="Apply for Diploma"
           primaryCtaHref="#apply"
           secondaryCtaText="Download Syllabus"
-          secondaryCtaHref="#syllabus"
+          secondaryCtaHref="#apply"
         />
         <DiplomaBuildCareerSection />
         <DiplomaLifeCarousel />

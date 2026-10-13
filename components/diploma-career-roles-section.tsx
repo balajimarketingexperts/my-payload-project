@@ -382,8 +382,8 @@ export default function DiplomaCareerRolesSection() {
 
             <div className="flex flex-col sm:flex-row lg:flex-col gap-3 flex-shrink-0">
               <a
-                href="#syllabus"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold text-sm transition-all"
+                href="#apply"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold text-sm transition-all cursor-pointer"
               >
                 Check Batch Fees & Syllabus
               </a>

@@ -57,17 +57,7 @@ export default function DiplomaBuildCareerSection() {
   };
 
   const handleSyllabusClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const el = document.getElementById("syllabus") || document.getElementById("curriculum");
-    if (el) {
-      const headerOffset = 110;
-      const elementPosition = el.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
+    handleApplyClick(e);
   };
 
   return (
@@ -99,7 +89,7 @@ export default function DiplomaBuildCareerSection() {
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
-              href="#syllabus"
+              href="#apply"
               onClick={handleSyllabusClick}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full bg-white hover:bg-[#FFFDF9] text-[#1F2A5C] border-2 border-[#1F2A5C]/20 hover:border-[#F86104] hover:text-[#F86104] text-sm font-bold transition-all shadow-sm cursor-pointer active:scale-95"
             >

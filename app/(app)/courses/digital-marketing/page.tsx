@@ -99,7 +99,7 @@ export default function DigitalMarketingCoursePage() {
           primaryCtaText="Apply for Digital Marketing"
           primaryCtaHref="#apply"
           secondaryCtaText="Download Syllabus"
-          secondaryCtaHref="#syllabus"
+          secondaryCtaHref="#apply"
           formTitle="Apply for Marketing Launchpad"
           formSubtitle="Secure your seat in Delhi's top agency-led digital marketing training"
           formBadge="Admissions Open 2026"
