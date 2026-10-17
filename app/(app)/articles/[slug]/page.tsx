@@ -1,4 +1,4 @@
-import { redirect } from 'next/navigation'
+import { permanentRedirect } from 'next/navigation'
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -6,5 +6,6 @@ type Props = {
 
 export default async function ArticleSlugRedirectPage({ params }: Props) {
   const { slug } = await params
-  redirect(`/blog/${slug}`)
+  permanentRedirect(`/blog/${slug}`)
 }
+

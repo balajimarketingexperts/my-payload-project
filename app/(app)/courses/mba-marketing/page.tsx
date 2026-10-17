@@ -48,11 +48,15 @@ export const metadata: Metadata = {
     "client relationship manager",
     "inbound, outbound, B2B and account-based marketing roles",
   ],
+  alternates: {
+    canonical: "https://balajimarketinginstitute.in/courses/mba-marketing",
+  },
   openGraph: {
     title:
       "AI-Led Sales and Marketing Program with Placements | Balaji Marketing Institute New Delhi",
     description:
       "Placement-focused post graduate program (PGP) in sales and marketing. Better ROI than MBA, placement accountability, job-ready skills, and 150+ hiring partners in Delhi NCR.",
+    url: "https://balajimarketinginstitute.in/courses/mba-marketing",
     type: "website",
     locale: "en_IN",
   },

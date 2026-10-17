@@ -49,11 +49,15 @@ export const metadata: Metadata = {
     "AI Prompt Engineering",
     "Generative AI for Content",
   ],
+  alternates: {
+    canonical: "https://balajimarketinginstitute.in/courses/diploma",
+  },
   openGraph: {
     title:
       "Best Digital Marketing Course in Delhi with Placement | Balaji Marketing Institute",
     description:
       "Master Meta Ads, Google Ads, SEO, Generative AI, and performance analytics with live ad spend projects in Rohini, Pitampura, Budh Vihar & Delhi.",
+    url: "https://balajimarketinginstitute.in/courses/diploma",
     type: "website",
     locale: "en_IN",
   },

@@ -50,6 +50,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${title} | Balaji Marketing Institute`,
       description,
       alternates: { canonical },
+      robots: article.seo?.noIndex
+        ? {
+            index: false,
+            follow: true,
+          }
+        : undefined,
       openGraph: {
         title,
         description,
@@ -63,7 +69,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     }
   } catch {
-    return { title: 'Blog | Balaji Marketing Institute' }
+    return {
+      title: 'Blog | Balaji Marketing Institute',
+      alternates: { canonical: `https://balajimarketinginstitute.in/blog/${slug}` },
+    }
   }
 }
 

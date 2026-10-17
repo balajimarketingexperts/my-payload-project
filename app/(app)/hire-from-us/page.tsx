@@ -63,11 +63,15 @@ export const metadata: Metadata = {
     "what skills to look for in a digital marketer",
     "how long does it take to hire a digital marketer",
   ],
+  alternates: {
+    canonical: "https://balajimarketinginstitute.in/hire-from-us",
+  },
   openGraph: {
     title:
       "Hire Job-Ready Marketing Graduates, Ready from Week One | Balaji Marketing Institute",
     description:
       "Skip months of training. Our graduates have managed live ad budgets, GA4 dashboards, and real campaigns. Shortlists delivered within 48 hours with 0 recruiter fees.",
+    url: "https://balajimarketinginstitute.in/hire-from-us",
     type: "website",
     locale: "en_IN",
   },

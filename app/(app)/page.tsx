@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import SiteHeader from "@/components/site-header";
 import ScrollMorphHero from "@/components/ui/scroll-morph-hero";
 import StatsSection from "@/components/ui/stats-section";
@@ -8,6 +9,21 @@ import TestimonialsSection from "@/components/ui/testimonials-section";
 import AboutUsSection from "@/components/ui/about-us-section";
 import SiteFooter from "@/components/site-footer";
 import FloatingContactPopup from "@/components/ui/floating-contact-popup";
+
+export const metadata: Metadata = {
+  title: "Best Digital Marketing Institute in Rohini | Balaji Marketing Institute",
+  description:
+    "Join Balaji Marketing Institute in Rohini, Delhi. Master SEO, Performance Marketing, Social Media & AI Tools with 100% practical training & placement assistance.",
+  alternates: {
+    canonical: "https://balajimarketinginstitute.in",
+  },
+  openGraph: {
+    title: "Best Digital Marketing Institute in Rohini | Balaji Marketing Institute",
+    description:
+      "Join Balaji Marketing Institute in Rohini, Delhi. Master SEO, Performance Marketing, Social Media & AI Tools with 100% practical training & placement assistance.",
+    url: "https://balajimarketinginstitute.in",
+  },
+};
 
 /* ── JSON-LD: EducationalOrganization schema ─────────────────────────── */
 const jsonLd = {

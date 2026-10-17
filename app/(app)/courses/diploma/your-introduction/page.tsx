@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     "Your Introduction | Diploma in Digital Marketing | Balaji Marketing Institute",
   description:
     "Answer a few simple questions about your career goals, what you know about digital marketing, and watch a video to share what audience is watching.",
+  alternates: {
+    canonical:
+      "https://balajimarketinginstitute.in/courses/diploma/your-introduction",
+  },
 };
 
 const diplomaIntroductionConfig: MofuCourseConfig = {

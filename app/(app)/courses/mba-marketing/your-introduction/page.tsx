@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     "Your Introduction | MBA in Marketing | Balaji Marketing Institute",
   description:
     "Answer a few simple questions about your career goals, what you know about marketing strategy, and watch a video to share what audience is watching.",
+  alternates: {
+    canonical:
+      "https://balajimarketinginstitute.in/courses/mba-marketing/your-introduction",
+  },
 };
 
 const mbaMarketingIntroductionConfig: MofuCourseConfig = {

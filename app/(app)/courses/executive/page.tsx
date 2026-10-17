@@ -35,11 +35,15 @@ export const metadata: Metadata = {
     "Advanced digital marketing course for executives",
     "Head of Growth executive training",
   ],
+  alternates: {
+    canonical: "https://balajimarketinginstitute.in/courses/executive",
+  },
   openGraph: {
     title:
       "Executive Marketing & Growth Program for Working Professionals | Balaji Marketing Institute",
     description:
       "Intensive 3-month Sunday program in 7-figure performance media, CRO, GA4 attribution, Generative AI automation, and boardroom leadership in Delhi NCR.",
+    url: "https://balajimarketinginstitute.in/courses/executive",
     type: "website",
     locale: "en_IN",
   },

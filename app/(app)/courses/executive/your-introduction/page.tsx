@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     "Your Introduction | Executive Marketing Program | Balaji Marketing Institute",
   description:
     "Answer a few simple questions about your career goals, what you know about performance marketing, and watch a video to share what audience is watching.",
+  alternates: {
+    canonical:
+      "https://balajimarketinginstitute.in/courses/executive/your-introduction",
+  },
 };
 
 const executiveIntroductionConfig: MofuCourseConfig = {

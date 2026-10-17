@@ -15,6 +15,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://balajimarketinginstitute.in/blog',
   },
+  openGraph: {
+    title: 'Blog & Digital Marketing Insights | Balaji Marketing Institute Rohini',
+    description:
+      'Read actionable guides, SEO strategies, Meta Ads blueprints, and career roadmaps written by agency practitioners at Balaji Marketing Institute.',
+    url: 'https://balajimarketinginstitute.in/blog',
+    type: 'website',
+    locale: 'en_IN',
+  },
 }
 
 export default async function BlogPage() {

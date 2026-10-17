@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     "Your Introduction | Balaji Marketing Institute",
   description:
     "Answer a few simple questions about your goals, share what you know about marketing, and watch a video to share what audience is watching.",
+  alternates: {
+    canonical: "https://balajimarketinginstitute.in/your-introduction",
+  },
 };
 
 const generalIntroductionConfig: MofuCourseConfig = {

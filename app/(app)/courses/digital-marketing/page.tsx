@@ -34,11 +34,15 @@ export const metadata: Metadata = {
     "Google Ads certification",
     "SEO training Delhi",
   ],
+  alternates: {
+    canonical: "https://balajimarketinginstitute.in/courses/digital-marketing",
+  },
   openGraph: {
     title:
       "Best Digital Marketing Course in Delhi with Placement | Balaji Marketing Institute",
     description:
       "Master Meta Ads, Google Ads, SEO, Generative AI, and performance analytics with live ad spend projects in Rohini, Pitampura, Budh Vihar & Delhi.",
+    url: "https://balajimarketinginstitute.in/courses/digital-marketing",
     type: "website",
     locale: "en_IN",
   },
